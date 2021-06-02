@@ -7,6 +7,7 @@ Panels:
         - /Global Options1
         - /Status1
         - /TF1
+        - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 728
   - Class: rviz/Selection
@@ -57,50 +58,51 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: false
+        All Enabled: true
         Robot_1/base_link:
-          Value: false
+          Value: true
         base_link:
-          Value: false
+          Value: true
         camera_accel_frame:
-          Value: false
+          Value: true
         camera_accel_optical_frame:
-          Value: false
+          Value: true
         camera_gyro_frame:
           Value: true
         camera_gyro_optical_frame:
-          Value: false
+          Value: true
         camera_link:
-          Value: false
+          Value: true
         camera_odom_frame:
           Value: true
         camera_pose_frame:
           Value: true
         laser:
           Value: true
+        map:
+          Value: true
         odom:
-          Value: false
+          Value: true
         world:
-          Value: false
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        odom:
-          base_link:
-            {}
-          camera_odom_frame:
-            camera_pose_frame:
+        camera_odom_frame:
+          camera_pose_frame:
+            camera_link:
               camera_accel_frame:
                 camera_accel_optical_frame:
                   {}
               camera_gyro_frame:
                 camera_gyro_optical_frame:
                   {}
-              camera_link:
-                {}
+        map:
+          odom:
+            base_link:
               laser:
                 {}
       Update Interval: 0
@@ -120,9 +122,9 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 1075
+      Max Intensity: 1136
       Min Color: 0; 0; 0
-      Min Intensity: 73
+      Min Intensity: 83
       Name: LaserScan
       Position Transformer: XYZ
       Queue Size: 10
@@ -149,7 +151,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: camera_pose_frame
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -173,7 +175,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 25.375070571899414
+      Distance: 26.431922912597656
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
