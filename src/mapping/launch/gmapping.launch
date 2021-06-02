@@ -1,13 +1,14 @@
 
 <launch>
 
-
+    <!-- <node pkg="tf" type="static_transform_publisher" name="map_odom" args="0 0 0 0 0 0 1 map odom 1000" />
     <node pkg="tf" type="static_transform_publisher" name="odom_camera_odom_frame" args="0 0 0 0 0 0 1 odom camera_odom_frame 1000" />
+    <node pkg="tf" type="static_transform_publisher" name="odom_camera_pose_frame" args="0 0 0 0 0 0 1 base_link camera_pose_frame 1000" />
     <node pkg="tf" type="static_transform_publisher" name="camera_pose_frame_camera_gyro_frame" args="0 0 0 0 0 0 1 camera_pose_frame camera_gyro_frame 1000" />
     <node pkg="tf" type="static_transform_publisher" name="camera_pose_frame_camera_accel_frame" args="0 0 0 0 0 0 1 camera_pose_frame camera_accel_frame 1000" />
     <node pkg="tf" type="static_transform_publisher" name="camera_pose_frame_camera_gyro_optical" args="0 0 0 0 0 0 1 camera_pose_frame camera_gyro_optical_frame 1000" />
-    <node pkg="tf" type="static_transform_publisher" name="camera_pose_frame_camera_accel_optical" args="0 0 0 0 0 0 1 camera_pose_frame camera_accel_optical_frame 1000" />
-    <node pkg="tf" type="static_transform_publisher" name="camera_pose_frame_laser" args="0 0 0 0 0 0 1 camera_pose_frame laser 1000" />
+    <node pkg="tf" type="static_transform_publisher" name="camera_pose_frame_camera_accel_optical" args="0 0 0 0 0 0 1 camera_pose_frame camera_accel_optical_frame 1000" /> -->
+    <node pkg="tf" type="static_transform_publisher" name="base_link_laser" args="0 0 0 0 0 0 1 base_link laser 1000" />
 
 
     <node pkg="rqt_tf_tree" type = "rqt_tf_tree" name = "rqt_tf_tree"/>
@@ -16,11 +17,11 @@
     <param name="use_sim_time"  value="true" />
 
     <arg name="scan_topic" default="scan"/>
-    <arg name="base_frame" default="camera_pose_frame"/>
-    <arg name="odom_frame" default="camera_odom_frame"/>
+    <arg name="base_frame" default="base_link"/>
+   <!-- <arg name="odom_frame" default="odom"/>  -->
     <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
         <param name="base_frame" value="$(arg base_frame)"/>
-        <param name="odom_frame" value="$(arg odom_frame)"/>
+        <!--<param name="odom_frame" value="$(arg odom_frame)"/>  -->
         <param name="map_update_interval" value="1.0"/>
         <param name="maxUrange" value="10.0"/>
         <param name="maxRange" value="10.5"/>
