@@ -1,0 +1,21 @@
+<robot
+  name="wall-e">
+  <link
+    name="base_link">
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 1.6" />
+      <geometry>
+        <mesh
+          filename="package://mapping/mesh/Wall-E_Scaled.stl" scale="0.01 0.01 0.01" />
+      </geometry>
+
+      <material
+        name="">
+        <color
+          rgba="255 255 0 1" />
+      </material>
+    </visual>
+  </link>
+</robot>
