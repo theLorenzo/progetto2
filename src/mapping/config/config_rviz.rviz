@@ -61,18 +61,6 @@ Visualization Manager:
         All Enabled: true
         Robot_1/base_link:
           Value: true
-        base_link:
-          Value: true
-        camera_accel_frame:
-          Value: true
-        camera_accel_optical_frame:
-          Value: true
-        camera_gyro_frame:
-          Value: true
-        camera_gyro_optical_frame:
-          Value: true
-        camera_link:
-          Value: true
         camera_odom_frame:
           Value: true
         camera_pose_frame:
@@ -81,7 +69,9 @@ Visualization Manager:
           Value: true
         map:
           Value: true
-        odom:
+        scout/base_link:
+          Value: true
+        scout/odom:
           Value: true
         world:
           Value: true
@@ -91,18 +81,9 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        camera_odom_frame:
-          camera_pose_frame:
-            camera_link:
-              camera_accel_frame:
-                camera_accel_optical_frame:
-                  {}
-              camera_gyro_frame:
-                camera_gyro_optical_frame:
-                  {}
         map:
-          odom:
-            base_link:
+          scout/odom:
+            scout/base_link:
               laser:
                 {}
       Update Interval: 0
@@ -122,9 +103,9 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 1136
+      Max Intensity: 1201
       Min Color: 0; 0; 0
-      Min Intensity: 83
+      Min Intensity: 129
       Name: LaserScan
       Position Transformer: XYZ
       Queue Size: 10
@@ -151,7 +132,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: base_link
+    Fixed Frame: scout/base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -175,16 +156,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 26.431922912597656
+      Distance: 13.748103141784668
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.19547446072101593
-        Y: -1.1302449703216553
-        Z: -2.3640522956848145
+        X: -0.3071485161781311
+        Y: 0.8095857501029968
+        Z: -1.970301628112793
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
