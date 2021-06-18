@@ -8,12 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8d08c505-dfd5-4bc4-b5b8-c4f122ea652a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mapping/config/config_rviz.rviz" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapping/config/config_rviz.rviz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mapping/launch/amcl.launch" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapping/launch/amcl.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mapping/launch/gmapping.launch" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapping/launch/gmapping.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mapping/launch/robot_localization_demo.launch" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapping/launch/robot_localization_demo.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mapping/maps/map.pgm" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapping/maps/map.pgm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mapping/robot/edo_sim.urdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +36,13 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,7 +54,8 @@
       <workItem from="1622303529453" duration="2930000" />
       <workItem from="1622405383010" duration="3428000" />
       <workItem from="1623183980011" duration="4067000" />
-      <workItem from="1623959757631" duration="5039000" />
+      <workItem from="1623959757631" duration="5459000" />
+      <workItem from="1624028159554" duration="4343000" />
     </task>
     <servers />
   </component>
