@@ -2,6 +2,8 @@
 
     <node pkg="tf" type="static_transform_publisher" name="base_link2_laser" args="0 0 0 0 0 0 1 /scout/base_link camera_accel_optical_frame 1000" />
     <node pkg="tf" type="static_transform_publisher" name="base_link3_laser" args="0 0 0 0 0 0 1 /scout/base_link camera_gyro_optical_frame 1000" />
+    <node pkg="tf" type="static_transform_publisher" name="base_link8_laser" args="0 0 0 0 0 0 1 base_link camera_accel_optical_frame 1000" />
+    <node pkg="tf" type="static_transform_publisher" name="base_link9_laser" args="0 0 0 0 0 0 1 base_link camera_gyro_optical_frame 1000" />
     <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_laser" args="0 0 0 0 0 0 1 /scout/base_link base_link 1000" /> -->
     <node pkg="tf" type="static_transform_publisher" name="base_link_laser" args="0 0 0 0 0 0 1 map scout/odom  1000" />
     <node pkg="tf" type="static_transform_publisher" name="base_link1_laser" args="0 0 0 0 0 0 1 map odom 1000" />
@@ -37,8 +39,8 @@
     <param name="world_frame" value="odom" />
     <param name="print_diagnostics" value="true" />
     <param name="imu0" value="/imu/data" />
-    <param name="imu1" value="/camera/accel/sample" />
-    <param name="imu2" value="/camera/gyro/sample" />
+    <!-- <param name="imu1" value="/camera/accel/sample" />
+    <param name="imu2" value="/camera/gyro/sample" /> -->
     <param name="odom0" value="/odom" />
     <param name="imu0_differential" value="false"/>
     <param name="odom0_differential" value="false"/>
@@ -47,7 +49,7 @@
                                       false, false, false,
                                       true, true,  true,
                                       true,  true,  true]</rosparam>
-      <rosparam param="imu1_config">[false, false, false,
+      <!-- <rosparam param="imu1_config">[false, false, false,
                                       false,  false,  false,
                                       false, false, false,
                                       false,  false,  false,
@@ -56,7 +58,7 @@
                                       false,  false,  false,
                                       false, false, false,
                                       true,  true,  true,
-                                      false,  false,  false]</rosparam>
+                                      false,  false,  false]</rosparam> -->
      <rosparam param="odom0_config">[true, true, false,
                                       true, true, true,
                                       true, false, false,
@@ -64,6 +66,76 @@
                                       false, false, false]</rosparam>
   </node>
 
+
+               <!-- INIZIA AMCL -->
+
+
+        <!-- WALLEEEEEE -->
+         <arg name="gui" default="true" />
+
+        <!-- Load parameters into the parameter server -->
+        <param name="robot_description" textfile="$(find mapping)/robot/wall-e.urdf" />
+        <param name="use_gui" value="$(arg gui)" />
+
+
+        <!-- Run the robot state publisher node -->
+        <node pkg="robot_state_publisher" type="robot_state_publisher" name="rob_st_pub" />
+
+
+        <!-- CODICE SERIO -->
+
+        <node pkg="tf" type="static_transform_publisher" name="base_link5_laser" args="0 0 0 0 0 0.7071068 0.7071068 base_link laser 1000" />
+
+
+        <arg name="use_map_topic"   default="true"/>
+        <arg name="scan_topic"      default="scan"/>
+        <arg name="initial_pose_x"  default="0.0"/>
+        <arg name="initial_pose_y"  default="0.0"/>
+        <arg name="initial_pose_a"  default="0.0"/>
+        <arg name="odom_frame_id"   default="odom"/>
+        <arg name="base_frame_id"   default="base_link"/>
+        <arg name="global_frame_id" default="map"/>
+
+        <node pkg="amcl" type="amcl" name="amcl">
+            <param name="use_map_topic"             value="$(arg use_map_topic)"/>
+            <!-- Publish scans from best pose at a max of 10 Hz -->
+            <param name="odom_model_type"           value="diff"/>
+            <param name="gui_publish_rate"          value="10.0"/>
+            <param name="laser_max_beams"             value="60"/>
+            <param name="laser_max_range"           value="15.0"/>
+            <param name="min_particles"             value="500"/>
+            <param name="max_particles"             value="2000"/>
+            <param name="kld_err"                   value="0.05"/>
+            <param name="kld_z"                     value="0.99"/>
+            <param name="odom_alpha1"               value="0.2"/>
+            <param name="odom_alpha2"               value="0.2"/>
+            <param name="odom_alpha3"               value="0.2"/>
+            <param name="odom_alpha4"               value="0.2"/>
+            <param name="odom_alpha5"               value="0.1"/>
+            <param name="laser_z_hit"               value="0.5"/>
+            <param name="laser_z_short"             value="0.05"/>
+            <param name="laser_z_max"               value="0.05"/>
+            <param name="laser_z_rand"              value="0.5"/>
+            <param name="laser_sigma_hit"           value="0.2"/>
+            <param name="laser_lambda_short"        value="0.1"/>
+            <param name="laser_model_type"          value="likelihood_field"/>
+            <param name="laser_likelihood_max_dist" value="2.0"/>
+            <param name="update_min_d"              value="0.25"/>
+            <param name="update_min_a"              value="0.2"/>
+            <param name="odom_frame_id"             value="$(arg odom_frame_id)"/>
+            <param name="base_frame_id"             value="$(arg base_frame_id)"/>
+            <param name="global_frame_id"           value="$(arg global_frame_id)"/>
+            <param name="resample_interval"         value="1"/>
+            <param name="transform_tolerance"       value="1.0"/>
+            <param name="recovery_alpha_slow"       value="0.0"/>
+            <param name="recovery_alpha_fast"       value="0.0"/>
+            <param name="initial_pose_x"            value="$(arg initial_pose_x)"/>
+            <param name="initial_pose_y"            value="$(arg initial_pose_y)"/>
+            <param name="initial_pose_a"            value="$(arg initial_pose_a)"/>
+            <remap from="scan"                      to="$(arg scan_topic)"/>
+        </node>
+
+        <node type="rviz" name="rviz_comparazione" pkg="rviz" args="-d $(find mapping)/config/config_rviz_amcl_ekf.rviz"/>
 
 
 </launch> 
