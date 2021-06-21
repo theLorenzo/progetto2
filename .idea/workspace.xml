@@ -8,7 +8,19 @@
   <component name="ChangeListManager">
     <list default="true" id="8d08c505-dfd5-4bc4-b5b8-c4f122ea652a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mapping/launch/robot_localization_demo.launch" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapping/launch/robot_localization_demo.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/config/config_rviz.rviz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/config/config_rviz_amcl.rviz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/config/config_rviz_amcl_ekf.rviz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/launch/amcl.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/launch/gmapping.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/launch/imu_tools.launch.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/launch/robot_localization_demo.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/maps/map.pgm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/maps/map.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/mesh/Wall-E_Scaled.stl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping/robot/wall-e.urdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +46,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -56,7 +61,8 @@
       <workItem from="1623183980011" duration="4067000" />
       <workItem from="1623959757631" duration="5459000" />
       <workItem from="1624028159554" duration="4613000" />
-      <workItem from="1624217197205" duration="8220000" />
+      <workItem from="1624217197205" duration="8385000" />
+      <workItem from="1624308932153" duration="29000" />
     </task>
     <servers />
   </component>
