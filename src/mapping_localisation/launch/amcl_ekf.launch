@@ -39,8 +39,8 @@
     <param name="world_frame" value="odom" />
     <param name="print_diagnostics" value="true" />
     <param name="imu0" value="/imu/data" />
-    <!-- <param name="imu1" value="/camera/accel/sample" />
-    <param name="imu2" value="/camera/gyro/sample" /> -->
+    <!-- <param name="imu1" value="/camera/accel/sample" /> -->
+    <param name="imu2" value="/camera/gyro/sample" />
     <param name="odom0" value="/odom" />
     <param name="imu0_differential" value="false"/>
     <param name="odom0_differential" value="false"/>
@@ -53,19 +53,18 @@
                                       false,  false,  false,
                                       false, false, false,
                                       false,  false,  false,
-                                      true,  true,  true]</rosparam>
-      <rosparam param="imu2_config">[false, false, false,
+                                      true,  true,  true]</rosparam> -->
+       <rosparam param="imu2_config">[false, false, false,
                                       false,  false,  false,
                                       false, false, false,
                                       true,  true,  true,
-                                      false,  false,  false]</rosparam> -->
+                                      false,  false,  false]</rosparam>
      <rosparam param="odom0_config">[true, true, false,
                                       true, true, true,
                                       true, false, false,
                                       false, false, true,
                                       false, false, false]</rosparam>
   </node>
-
 
                <!-- INIZIA AMCL -->
 
@@ -137,5 +136,4 @@
 
         <node type="rviz" name="rviz_comparazione" pkg="rviz" args="-d $(find mapping)/config/config_rviz_amcl_ekf.rviz"/>
 
-
-</launch> 
+</launch>
