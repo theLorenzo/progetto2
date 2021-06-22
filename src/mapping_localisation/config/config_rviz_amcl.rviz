@@ -139,7 +139,7 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        base_link:
+        scout/base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -150,6 +150,22 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Alpha: 1
+      Arrow Length: 0.30000001192092896
+      Axes Length: 0.30000001192092896
+      Axes Radius: 0.009999999776482582
+      Class: rviz/PoseArray
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.07000000029802322
+      Head Radius: 0.029999999329447746
+      Name: PoseArray
+      Shaft Length: 0.23000000417232513
+      Shaft Radius: 0.009999999776482582
+      Shape: Arrow (Flat)
+      Topic: /particlecloud
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -178,25 +194,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.2985987663269043
+      Distance: 18.80708122253418
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -3.2775840759277344
-        Y: -6.870283603668213
-        Z: 2.127866744995117
+        X: -1.4736847877502441
+        Y: 0.22327685356140137
+        Z: -1.7017923593521118
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7453969717025757
+      Pitch: 1.2253966331481934
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.7654022574424744
+      Yaw: 0.5104024410247803
     Saved: ~
 Window Geometry:
   Displays:

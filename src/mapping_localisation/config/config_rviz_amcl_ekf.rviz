@@ -6,11 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /PoseWithCovariance1
-        - /Odometry1
         - /Odometry1/Shape1
-        - /Odometry2
-        - /Odometry2/Shape1
       Splitter Ratio: 0.5
     Tree Height: 728
   - Class: rviz/Selection
@@ -186,6 +182,22 @@ Visualization Manager:
       Topic: /odometry/filtered
       Unreliable: false
       Value: true
+    - Alpha: 1
+      Arrow Length: 0.10000000149011612
+      Axes Length: 0.10000000149011612
+      Axes Radius: 0.009999999776482582
+      Class: rviz/PoseArray
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.07000000029802322
+      Head Radius: 0.029999999329447746
+      Name: PoseArray
+      Shaft Length: 0.23000000417232513
+      Shaft Radius: 0.009999999776482582
+      Shape: Arrow (Flat)
+      Topic: /particlecloud
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -214,25 +226,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 31.191614151000977
+      Distance: 30.855472564697266
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -2.206664800643921
-        Y: -12.690173149108887
-        Z: -4.520061492919922
+        X: -3.7482917308807373
+        Y: -5.100753307342529
+        Z: -4.286060810089111
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5697963237762451
+      Pitch: 1.4297960996627808
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.6104024052619934
+      Yaw: 0.265402615070343
     Saved: ~
 Window Geometry:
   Displays:
