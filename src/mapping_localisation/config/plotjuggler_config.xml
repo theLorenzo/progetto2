@@ -3,35 +3,29 @@
  <tabbed_widget parent="main_window" name="Main Window">
   <Tab containers="1" tab_name="tab1">
    <Container>
-    <DockSplitter orientation="-" count="3" sizes="0.333705;0.332589;0.333705">
+    <DockSplitter sizes="0.333705;0.332589;0.333705" orientation="-" count="3">
      <DockArea name="...">
-      <plot style="Lines" mode="TimeSeries">
-       <range bottom="-5.968814" right="103.165290" left="97.999800" top="0.967047"/>
+      <plot mode="TimeSeries" style="Lines">
+       <range top="-3.116383" right="10.950562" left="5.902033" bottom="-3.550543"/>
        <limitY/>
-       <curve name="/odom/pose/position/x" color="#d62728"/>
-       <curve name="/odometry/filtered/pose/position/x" color="#f14cc1"/>
-       <curve name="/Robot_1/ground_pose/x" color="#17becf"/>
-       <curve name="/Robot_1/pose/position/x" color="#1ac938"/>
+       <curve color="#d62728" name="/odom/pose/position/x"/>
+       <curve color="#f14cc1" name="/odometry/filtered/pose/position/x"/>
       </plot>
      </DockArea>
      <DockArea name="...">
-      <plot style="Lines" mode="TimeSeries">
-       <range bottom="-2.750133" right="103.165290" left="97.999800" top="0.489000"/>
+      <plot mode="TimeSeries" style="Lines">
+       <range top="-6.324881" right="10.950562" left="5.902033" bottom="-11.255547"/>
        <limitY/>
-       <curve name="/odom/pose/position/y" color="#1ac938"/>
-       <curve name="/odometry/filtered/pose/position/y" color="#9467bd"/>
-       <curve name="/Robot_1/ground_pose/y" color="#bcbd22"/>
-       <curve name="/Robot_1/pose/position/y" color="#ff7f0e"/>
+       <curve color="#1ac938" name="/odom/pose/position/y"/>
+       <curve color="#9467bd" name="/odometry/filtered/pose/position/y"/>
       </plot>
      </DockArea>
      <DockArea name="...">
-      <plot style="Lines" mode="TimeSeries">
-       <range bottom="403.028273" right="103.165290" left="97.999800" top="434.139779"/>
+      <plot mode="TimeSeries" style="Lines">
+       <range top="278.809133" right="10.950562" left="5.902033" bottom="271.550148"/>
        <limitY/>
-       <curve name="/odom/pose/orientation/yaw_deg" color="#1f77b4"/>
-       <curve name="/odometry/filtered/pose/orientation/yaw_deg" color="#ff7f0e"/>
-       <curve name="/Robot_1/ground_pose/theta" color="#1f77b4"/>
-       <curve name="/Robot_1/pose/orientation/yaw_deg" color="#d62728"/>
+       <curve color="#1f77b4" name="/odom/pose/orientation/yaw_deg"/>
+       <curve color="#ff7f0e" name="/odometry/filtered/pose/orientation/yaw_deg"/>
       </plot>
      </DockArea>
     </DockSplitter>
