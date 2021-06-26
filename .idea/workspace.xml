@@ -6,7 +6,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d08c505-dfd5-4bc4-b5b8-c4f122ea652a" name="Default Changelist" comment="" />
+    <list default="true" id="8d08c505-dfd5-4bc4-b5b8-c4f122ea652a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.~lock.Descrizione.odt#" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +51,7 @@
       <workItem from="1624217197205" duration="8385000" />
       <workItem from="1624308932153" duration="29000" />
       <workItem from="1624396956900" duration="1925000" />
-      <workItem from="1624476368922" duration="7539000" />
+      <workItem from="1624476368922" duration="7619000" />
     </task>
     <servers />
   </component>
