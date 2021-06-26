@@ -22,6 +22,7 @@
     <!-- Load the map previously saved -->
     <node pkg="map_server" type = "map_server" name = "map_server" args=" $(find mapping)/maps/map.yaml"/>
 
+    
 
     <param name="use_sim_time"  value="true" />
 
