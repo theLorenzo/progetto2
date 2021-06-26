@@ -7,7 +7,18 @@ project(mapping)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED roscpp std_msgs sensor_msgs geometry_msgs)
+
+
+catkin_package(CATKIN_DEPENDS roscpp std_msgs  geometry_msgs sensor_msgs)
+
+## Build talker and listener
+include_directories(include ${catkin_INCLUDE_DIRS})
+
+
+add_executable(mapping_localisation src/generatore.cpp)
+
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)

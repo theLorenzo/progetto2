@@ -7,6 +7,8 @@
     <node pkg="tf" type="static_transform_publisher" name="odom_scout_odom" args="0 0 0 0 0 0 1 odom /scout/odom 1000" />
    <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_laser" args="0 0 0 0 0 0 1 map scout/odom  1000" />
     <node pkg="tf" type="static_transform_publisher" name="base_link1_laser" args="0 0 0 0 0 0 1 map odom 1000" />-->
+
+
     <!-- IMU_FILTER -->
     <node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_madgwick_node" output="screen">
         <remap from="imu/data_raw" to="mavros/imu/data_raw"/>
