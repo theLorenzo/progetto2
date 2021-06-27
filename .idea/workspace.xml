@@ -7,7 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d08c505-dfd5-4bc4-b5b8-c4f122ea652a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.~lock.Descrizione.odt#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping_localisation/launch/amcl_ekf.launch" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapping_localisation/launch/amcl_ekf.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapping_localisation/launch/gmapping.launch" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapping_localisation/launch/gmapping.launch" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
